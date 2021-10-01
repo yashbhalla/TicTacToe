@@ -14,12 +14,12 @@ public:
 	}
 	
 	char getPosition(int row, int column) {
-		return positions[row][column];
+		return positions[row][column]; //return the position on the board
 	}
 	
 	int setPosition (int i, int j, char user) {
 		if (positions[i][j] == '-'){
-			positions[i][j] = user;
+			positions[i][j] = user; //set the position to user char
 			return 0;
 		}
 		else 
@@ -122,11 +122,11 @@ public:
 	
 	char determineWinner(){
 		char winner = 'z';
-		winner =checkRows();
+		winner =checkRows(); //check rows
 		if (winner=='z')
-			winner=checkColumns();
+			winner=checkColumns(); //check columns
 		if(winner=='z')
-			winner=checkDiagonals();
+			winner=checkDiagonals(); //check diagonals
 		return winner;
 	}
 };
