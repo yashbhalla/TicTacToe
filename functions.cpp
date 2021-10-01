@@ -14,9 +14,9 @@ void getUserNames(string &userX, string &userO){
 void printBlankBoard(){ //print blank board with numbered squares
 	for(int i=0; i<3; i++){
 		for(int j=0; j<3; j++){
-			cout<<" ("<<i+1<<","<<j+1<<") ";
+			cout<<" ("<<i+1<<","<<j+1<<") "; //print numbers
 			if(j==0 || j==1)
-				cout<<"|";
+				cout<<"|"; //prints line in the middle
 		}
 		cout<<endl;
 	}
@@ -36,30 +36,30 @@ void printBoard(Board &boardIn){
 }
 
 void printUserPrompt(string nameIn, char letter){
-	cout<<nameIn<<", where would you like to place your "<<letter<<"?\t";
+	cout<<nameIn<<", where would you like to place your "<<letter<<"?\t"; //prompt for inputting position
 	return;
 }
 
 void printWinner(Board &boardIn, string nameX, string nameO){
 	char winner = boardIn.determineWinner();
 	if(winner=='x')
-		cout<<"Congrats "<<nameX<<"! You won!\n";
+		cout<<"Congrats "<<nameX<<"! You won!\n"; //X won
 	if(winner=='o')
-		cout<<"Congrats "<<nameO<<"! You won!\n";
+		cout<<"Congrats "<<nameO<<"! You won!\n"; //O won
 	return;
 }
 
 int getRow(){
 	int row;
 	cout<<"\nEnter a row: 1, 2 or 3:\t";
-	cin>>row;
+	cin>>row; //input row
 	return row;
 }
 
 int getColumn(){
 	int col;
 	cout<<"\nEnter a column: 1, 2 or 3:\t";
-	cin>>col;
+	cin>>col; //input column
 	return col;
 }
 
@@ -70,6 +70,6 @@ void checkResponse(Board &boardIn, char input) {
 		col=getColumn()-1;
 		userInput=boardIn.setPosition(row, col, input);
 		if (userInput==-1)
-			cout<<"This position is already taken! Try again!\n";
+			cout<<"This position is already taken! Try again!\n"; //position already taken
 	} while (userInput==-1);
 }
