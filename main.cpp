@@ -34,7 +34,7 @@ int main(){
 			printWinner(game, nameX, nameO);
 			break;
 		}
-		turns+=2;
+		turns+=2; //updates for each round
 	}
 	if(turns >= 8)
 		cout<<"Game is tied!\n";
