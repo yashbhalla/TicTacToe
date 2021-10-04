@@ -1,2 +1,2 @@
 # TicTacToe
-Simple tic tac toe project using C++.
+Simple tic tac toe project using C++. Do check.
